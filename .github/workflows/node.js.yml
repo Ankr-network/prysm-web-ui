@@ -1,4 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# This workflow will do a clean install of node dependencies, build-linux the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Node.js CI
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm ci and npm run build:dev
+      - name: npm ci and npm run build-linux:dev
         run: |
           npm ci
           npm run build:ci
